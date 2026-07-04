@@ -13,3 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+const eventsBg = document.getElementById("eventsBg");
+
+window.addEventListener("scroll", () => {
+    if (!eventsBg) return;
+
+    const rect = eventsBg.parentElement.getBoundingClientRect();
+    const offset = -rect.top * 0.3;
+
+    eventsBg.style.transform = `translateY(${offset}px)`;
+});
