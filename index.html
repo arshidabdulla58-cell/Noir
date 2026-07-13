@@ -15,6 +15,14 @@
 </head>
 <body>
     <div class="bg-black ">
+
+   
+    <!-- Preloader -->
+    <div id="preloader">
+        <h1 class="loader-text">NOIR</h1>
+    </div>
+    
+
 <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md">
 
     <div class="max-w-7xl mx-auto px-6">
@@ -743,4 +751,13 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
+<script>
+          const preloader = document.getElementById('preloader');
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    initCounters();
+                }, 1500);
+            });
+</script>
 </html>
